@@ -13,8 +13,7 @@ php7-json php7-iconv php7-xdebug php7-zip php7-amqp php7-mcrypt php7-session php
 RUN set -ex; \
     pecl install -f mongodb; \
     echo 'extension=mongodb.so' > /etc/php7/conf.d/mongodb.ini; \
-    pecl install -f igbinary; \
-    echo 'extension=igbinary.so' > /etc/php7/conf.d/igbinary.ini;
+    pecl install -f igbinary;
 
 # add composer if necessary
 RUN curl -fSL https://getcomposer.org/installer -o composer-setup.php \
